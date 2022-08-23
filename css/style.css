@@ -155,7 +155,7 @@ body {
   margin: 0 auto;
   width:300px;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 .about-txt img{
@@ -337,5 +337,8 @@ body {
   }
   .icons-design :nth-child(3){
     width: 70px;
+  }
+  .about-txt h1 {
+    font-size: 1.5em;
   }
 }
