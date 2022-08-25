@@ -8,12 +8,18 @@ body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     color: #CBCBCB;
-    background-color: #161616;
-    /* background: linear-gradient(45deg,#212121, #474747, #000000);
+    /* background-color: #161616; */
+    background: linear-gradient(45deg,#212121, #474747, #000000);
     background-size: 300%, 300%;
-    animation: colors 15s ease infinite; */
+    animation: colors 15s ease infinite;
   }
 
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #CBCBCB;    /* color of the scroll thumb */
+}
   /* ANIMAÇÃO DO BACKGROUND */
 
   /* @keyframes colors{
@@ -109,6 +115,11 @@ body {
     text-align: center;
     align-self: center;
 }
+.main-txt img:nth-child(1){
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
 .click-up{
     margin: 0 auto;
     display: flex;
@@ -156,7 +167,13 @@ body {
   width:300px;
   padding: 10px;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+.about-txt a{
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #161616;
 }
 .about-txt img{
   margin: 0 auto;
@@ -287,30 +304,28 @@ body {
   .nav{
     position: absolute;
     background-color: #CBCBCB;
-    border-radius: 0px 0px 10px 0px;
     width: 100vw;
     flex-direction: column;
     align-items: flex-start;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in;
+    display: none;
   }
   .nav li{
     font-size: 1.5em;
     margin-bottom: 10px;
   }
-
   .nav.active{
-    transform: translateX(0);
+    display: flex;
+    animation: show .5s forwards;
   }
 
-  @keyframes navLinkFade{
+  @keyframes show{
     from{
       opacity: 0;
-      transform: translate(-50px);
+      transform: translate3d(-100px, 0,0);
     }
     to{
       opacity: 1;
-      transform: translate(0);
+      transform: translate3d(0,0,0);
     }
   }
 /* ANIMAÇÃO MENU HAMBURGUER */
@@ -327,16 +342,16 @@ body {
     width: 120px;
   }
   .icons-tech img, .icons-design-up img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     margin: 10px;
   }
   .icons-tech img:nth-child(3){
-    width: 107px;
-    height: 107px;
+    width: 77px;
+    height: 77px;
   }
   .icons-design :nth-child(3){
-    width: 70px;
+    width: 50px;
   }
   .about-txt h1 {
     font-size: 1.5em;

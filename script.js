@@ -56,45 +56,68 @@ function smoothScrollTo(endX, endY, duration) {
   }
 
 
-class MobileNavBar {
-  constructor(mobileMenu, navList, navLinks) {
-    this.mobileMenu = document.querySelector(mobileMenu);
-    this.navList = document.querySelector(navList);
-    this.navLinks = document.querySelectorAll(navLinks);
-    this.activeClass = "active";
+// class MobileNavBar {
+//   constructor(mobileMenu, navList, navLinks) {
+//     this.mobileMenu = document.querySelector(mobileMenu);
+//     this.navList = document.querySelector(navList);
+//     this.navLinks = document.querySelectorAll(navLinks);
+//     this.activeClass = "active";
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+//     this.handleClick = this.handleClick.bind(this);
+//   }
 
 
-  animateLinks(){
-    this.navLinks.forEach((link, index)=>{
-      link.style.animation
-      ? (link.style.animation = " ")
-      : (link.style.animation = `navLinkFade 0.5s ease backwards 0.3s`);
-    })
-  }
-  handleClick () {
-    this.navList.classList.toggle(this.activeClass);
-    this.mobileMenu.classList.toggle(this.activeClass);
-    this.animateLinks();
-  }
+//   animateLinks(){
+//     this.navLinks.forEach((link, index)=>{
+//       link.style.animation
+//       ? (link.style.animation = " ")
+//       : (link.style.animation = `navLinkFade 0.5s ease backwards 0.3s`);
+//     })
+//   }
+//   handleClick () {
+//     this.navList.classList.toggle(this.activeClass);
+//     this.mobileMenu.classList.toggle(this.activeClass);
+//     this.animateLinks();
+//   }
 
-  addClickEvent(){
-    this.mobileMenu.addEventListener('click', this.handleClick);
-  }
+//   addClickEvent(){
+//     this.mobileMenu.addEventListener('click', this.handleClick);
+//   }
 
-  init(){
-    if(this.mobileMenu){
-      this.addClickEvent();
-    } return this
-  }
+//   init(){
+//     if(this.mobileMenu){
+//       this.addClickEvent();
+//     } return this
+//   }
+// }
+
+// const mobileNavBar = new MobileNavBar(
+//   ".mobile-menu",
+//   ".nav",
+//   ".nav li"
+// );
+
+// mobileNavBar.init();
+
+const menu = document.querySelector('.mobile-menu');
+const nav = document.querySelector('.nav');
+const navLinks = document.querySelectorAll('.nav li');
+
+
+//ANIMAÇÃO LINKS
+function animateLinks(){
+  navLinks.forEach((link, index)=>{
+    link.style.animation
+    ? (link.style.animation = " ")
+    : (link.style.animation = `show 0.5s ease backwards 0.3s`);
+  })
 }
 
-const mobileNavBar = new MobileNavBar(
-  ".mobile-menu",
-  ".nav",
-  ".nav li"
-);
+//FUNÇÃO DE CLICK NO MENU
+function handleMenu(){
+  menu.classList.toggle('active');
+  nav.classList.toggle('active');
+  animateLinks();
+}
 
-mobileNavBar.init();
+menu.addEventListener('click', handleMenu);
