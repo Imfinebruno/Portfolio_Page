@@ -7,9 +7,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    color: #CBCBCB;
-    /* background-color: #161616; */
-    background: linear-gradient(45deg,#212121, #474747, #000000);
+    color: #fff;
+    background-color: #002140;
+    /* background: linear-gradient(45deg,#212121, #474747, #000000); */
     background-size: 300%, 300%;
     animation: colors 15s ease infinite;
   }
@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
   width: 8px;               /* width of the entire scrollbar */
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #CBCBCB;    /* color of the scroll thumb */
+  background-color: #066FD0;    /* color of the scroll thumb */
 }
   /* ANIMAÇÃO DO BACKGROUND */
 
@@ -66,7 +66,7 @@ body::-webkit-scrollbar-thumb {
 }
 .navbar{
     position: fixed;
-    background-color: #CBCBCB;
+    background-color: #066FD0;
     width: 100%;
 }
 .nav{
@@ -82,10 +82,10 @@ body::-webkit-scrollbar-thumb {
 .nav li a{
   font-size: 1.2em;
   font-weight: 500;
-  color: #161616;
+  color: #fff;
 }
 .nav li a:hover{
-    color: #9C9C9C;
+    color: #dbdbdb;
     cursor: pointer;
     animation: 0.3s ;
 }
@@ -94,7 +94,7 @@ body::-webkit-scrollbar-thumb {
   display: none;
   width: 32px;
   height: 2px;
-  background-color: #161616;
+  background-color: #fff;
   margin: 8px;
   border-radius: 10px;
   cursor: pointer;
@@ -110,7 +110,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
 }
 .main-txt h1{
-    font-weight: 500;
+    font-weight: 200;
     font-size: 2em;
     text-align: center;
     align-self: center;
@@ -120,6 +120,17 @@ body::-webkit-scrollbar-thumb {
   width: 200px;
   height: 200px;
 }
+.main-txt span{
+  color: #066FD0;
+  font-weight:700;
+}
+
+#seta {
+  border-top: 30px solid #fff;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+
 .click-up{
     margin: 0 auto;
     display: flex;
@@ -128,13 +139,8 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     cursor: pointer;
 }
-
 .click-up a:hover{
   color: #777676;
-}
-.click-up img{
-    margin-top: 10px;
-    width: 20px;
 }
 
 .section-2{
@@ -162,7 +168,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 1.2em;
   text-align: center;
   color: #161616;
-  background-color: #9C9C9C;
+  background-color: #fff;
   margin: 0 auto;
   width:300px;
   padding: 10px;
@@ -226,58 +232,48 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-
-}
-.tech{
-  height: 100vh;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-.tech h1{
+.section-4 h1{
+  font-weight: 500;
+  font-size: 2em;
   text-align: center;
+  align-self: center;
+  margin-bottom: 70px;
 }
-.icons-tech{
-  margin-bottom: 100px;
+.section-4 h2{
+  font-weight: 200;
+  font-size: 1.2em;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 30px;
 }
-.icons-tech img{
-  width: 130px;
-  height: 130px;
-  margin: 20px;
+.icons-top img{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 }
-.icons-tech img:nth-child(3){
-  width: 140px;
-  height: 140px;
+.icons-bot img{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 }
-.icons-tech-down{
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-.icons-design-up img{
-  width: 130px;
-  margin: 20px;
-}
-.icons-design :nth-child(3){
-  width: 83px;
+.icons-bot img:nth-child(3){
+  width: 66px;
 }
 
 .click-down{
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   flex-direction: column;
   cursor: pointer;
-  margin-bottom: 100px;
+  transform: rotate(180deg);
+  margin-bottom: 200px;
 }
 .click-down a:hover{
-  color: #777676;
-}
-.click-down img{
-  margin-bottom: 10px;
-  width: 20px;
+color: #777676;
 }
 
 @media (max-width: 900px){
@@ -303,7 +299,7 @@ body::-webkit-scrollbar-thumb {
   }
   .nav{
     position: absolute;
-    background-color: #CBCBCB;
+    background-color: #066FD0;
     width: 100vw;
     flex-direction: column;
     align-items: flex-start;
@@ -329,6 +325,21 @@ body::-webkit-scrollbar-thumb {
     }
   }
 /* ANIMAÇÃO MENU HAMBURGUER */
+.about-txt h1{
+  font-size: 1.5em;
+  padding: 5px;
+  margin-top: 20px;
+}
+.about-txt h2{
+  margin-top: 10px;
+}
+.about-txt img{
+  width: 80px;
+}
+.links img{
+  width: 60px;
+  margin: 10px;
+}
 
 .section-1, .section-2, .section-3, .section-4{
     height: 100vh;
@@ -341,19 +352,20 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
     width: 120px;
   }
-  .icons-tech img, .icons-design-up img{
-    width: 70px;
-    height: 70px;
-    margin: 10px;
-  }
-  .icons-tech img:nth-child(3){
-    width: 77px;
-    height: 77px;
-  }
-  .icons-design :nth-child(3){
-    width: 50px;
-  }
   .about-txt h1 {
     font-size: 1.5em;
   }
+.icons-top img{
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+.icons-bot img{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.icons-bot img:nth-child(3){
+  width: 33px;
+}
 }
