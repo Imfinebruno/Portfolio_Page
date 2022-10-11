@@ -114,7 +114,7 @@ function animateLinks(){
 }
 
 //FUNÇÃO DE CLICK NO MENU
-function handleMenu(){
+function handleMenu(event){
   menu.classList.toggle('active');
   nav.classList.toggle('active');
   animateLinks();
