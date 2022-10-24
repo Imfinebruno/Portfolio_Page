@@ -248,11 +248,15 @@ body::-webkit-scrollbar-thumb {
   align-self: center;
   margin-bottom: 30px;
 }
-.icons-top img{
-  width: 100px;
-  height: 100px;
-  margin: 10px;
+.icons-top i{
+  transform: scale(7);
+  margin: 60px;
 }
+.icons-top i:hover{
+  cursor: pointer;
+  color: #066FD0;
+}
+
 .icons-bot img{
   width: 100px;
   height: 100px;
@@ -355,17 +359,22 @@ color: #777676;
   .about-txt h1 {
     font-size: 1.5em;
   }
-.icons-top img{
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-}
-.icons-bot img{
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-}
-.icons-bot img:nth-child(3){
-  width: 33px;
-}
+
+  .icons-top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .icons-top i{
+    scale: 0.7;
+    margin: 50px;  
+  }
+  .icons-bot img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+  }
+  .icons-bot img:nth-child(3){
+    width: 43px;
+  }
 }
